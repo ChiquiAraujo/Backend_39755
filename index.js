@@ -124,8 +124,6 @@ productManager.addProduct(
     "p3",
     4);
   
-
-
 // Actualizando un producto, pasando el ID y luego un obj con el nuevo stock
 productManager.updateProduct(8, { stock: 8 });
 
