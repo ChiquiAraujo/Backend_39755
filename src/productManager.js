@@ -1,7 +1,8 @@
 import fs from 'fs'
 import path from 'path';
 
-class ProductManager {
+//
+export default class ProductManager {
   constructor(path) {
     this.path = path;
     this.products = [];
@@ -13,7 +14,7 @@ class ProductManager {
     } catch (error) {
       console.error(`Error al leer el archivo ${this.path}: ${error}`);
     }
-  }
+  } 
 
   getNextId() {
     let maxId = 0;
@@ -98,7 +99,7 @@ class ProductManager {
   }
 }
 
-const productManager = new ProductManager("./productos.json");
+const productManager = new ProductManager("./productos/productos.json");
 
 productManager.addProduct(
   "iPhone 14",
@@ -128,4 +129,3 @@ productManager.addProduct(
 productManager.updateProduct(8, { stock: 8 });
 
 //productManager.deleteProduct(3);
-
